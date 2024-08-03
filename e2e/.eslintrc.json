@@ -1,0 +1,24 @@
+{
+    "ignorePatterns": ["!**/*"],
+    "overrides": [
+        {
+            "files": ["*.ts", "e2e/**/*.ts"],
+            "parser": "@typescript-eslint/parser",
+            "rules": {
+                "class-methods-use-this": ["off"]
+            },
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "project": ["tsconfig.*?.json"]
+            },
+            "extends": ["plugin:@nx/typescript"]
+        },
+        {
+            "files": ["*.js", "*.jsx"],
+            "extends": ["plugin:@nx/javascript"],
+            "rules": {}
+        }
+    ],
+    "plugins": ["@nx"],
+    "extends": ["plugin:cypress/recommended"]
+}

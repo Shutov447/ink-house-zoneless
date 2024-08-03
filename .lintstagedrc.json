@@ -1,0 +1,6 @@
+{
+    "*.{ts,js}": ["pnpm run prettier:fix", "npx eslint --fix"],
+    "*.html": ["pnpm run prettier:fix", "npx eslint --fix"],
+    "*.css": ["pnpm run prettier:fix"],
+    "*.json": ["pnpm run prettier:fix"]
+}
