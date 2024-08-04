@@ -1,0 +1,37 @@
+$Raleway: 'Raleway';
+
+@font-face {
+    font-family: $Raleway;
+    src: url(public/fonts/raleway/Raleway-Bold.ttf) format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $Raleway;
+    src: url(public/fonts/raleway/Raleway-Medium.ttf) format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font($size) {
+    font-family: Raleway;
+    font-size: $size;
+    font-weight: 500;
+}
+
+.body-L {
+    @include font(30em);
+}
+
+.body-M {
+    @include font(24em);
+}
+
+.body-S {
+    @include font(20em);
+}
+
+.body-XS {
+    @include font(18em);
+}
