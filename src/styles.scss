@@ -1,6 +1,11 @@
 @use '../node_modules/scss-reset/_reset.scss';
 @use 'fonts';
+@use 'colors';
+
+:root {
+    font-size: 1px;
+}
 
 body {
-    font-size: 1px;
+    background-color: colors.$MintCream;
 }

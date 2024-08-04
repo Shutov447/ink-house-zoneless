@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Color } from '@shared/lib';
 
 @Component({
     standalone: true,
@@ -9,4 +10,6 @@ import { RouterModule } from '@angular/router';
     styleUrl: './app.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+    readonly color = Color.OldGold;
+}

@@ -14,24 +14,25 @@ $Raleway: 'Raleway';
     font-style: normal;
 }
 
-@mixin font($size) {
+@mixin font($size, $weight: 500, $lh: 110%) {
     font-family: Raleway;
     font-size: $size;
-    font-weight: 500;
+    font-weight: $weight;
+    line-height: $lh;
 }
 
 .body-L {
-    @include font(30em);
+    @include font(30rem);
 }
 
 .body-M {
-    @include font(24em);
+    @include font(24rem);
 }
 
 .body-S {
-    @include font(20em);
+    @include font(20rem);
 }
 
 .body-XS {
-    @include font(18em);
+    @include font(18rem);
 }

@@ -77,7 +77,8 @@
             "changeDetection": "OnPush"
         },
         "@nx/angular:component": {
-            "style": "css"
+            "style": "scss",
+            "changeDetection": "OnPush"
         }
     },
     "defaultProject": "ink-house-zoneless"
