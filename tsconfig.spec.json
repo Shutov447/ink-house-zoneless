@@ -7,7 +7,6 @@
         "types": ["jest", "node"]
     },
     "files": ["src/test-setup.ts"],
-    // "exclude": ["e2e/**/*.ts"],
     "include": [
         "jest.config.ts",
         "src/**/*.test.ts",

@@ -75,6 +75,9 @@
             "style": "scss",
             "unitTestRunner": "jest",
             "changeDetection": "OnPush"
+        },
+        "@nx/angular:component": {
+            "style": "css"
         }
     },
     "defaultProject": "ink-house-zoneless"
