@@ -1,7 +1,7 @@
 <nav class="navigation body-S">
     <div class="navigation__logo">
         <a
-            routerLink="/"
+            [routerLink]="['/']"
             class="navigation__logo__link"
         >
             <app-icon
@@ -11,11 +11,11 @@
             <div class="navigation__logo__link__name">Ink. House</div></a
         >
     </div>
-    <div><a routerLink="">Репродукции</a></div>
-    <div><a routerLink="">Новинки</a></div>
-    <div><a routerLink="">О нас</a></div>
+    <div><a [routerLink]="['/']">Репродукции</a></div>
+    <div><a [routerLink]="['/']">Новинки</a></div>
+    <div><a [routerLink]="['/']">О нас</a></div>
     <div>
-        <a routerLink=""
+        <a [routerLink]="['/']"
             ><app-icon
                 [color]="BlackRock"
                 [name]="'cart'"

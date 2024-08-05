@@ -36,3 +36,7 @@ $Raleway: 'Raleway';
 .body-XS {
     @include font(18rem);
 }
+
+body {
+    font-family: $Raleway;
+}
