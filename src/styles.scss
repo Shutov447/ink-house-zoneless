@@ -1,6 +1,7 @@
 @use '../node_modules/scss-reset/_reset.scss';
 @use 'fonts';
 @use 'colors';
+@use 'links';
 
 :root {
     font-size: 1px;
@@ -8,4 +9,5 @@
 
 body {
     background-color: colors.$MintCream;
+    color: colors.$BlackRock;
 }

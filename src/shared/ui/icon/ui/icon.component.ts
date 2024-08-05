@@ -13,5 +13,5 @@ import { IconName } from '../lib';
 export class IconComponent {
     readonly name = input.required<IconName>();
     readonly color = input.required<Color>();
-    readonly noticesNumber = input.required<number>();
+    readonly noticesNumber = input<number>();
 }
