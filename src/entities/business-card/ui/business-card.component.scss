@@ -2,25 +2,24 @@
 
 :host {
     display: flex;
-    gap: 30rem;
-    max-width: 1110rem;
-    // width: 1110rem;
+    gap: 30px;
+    max-width: 1110px;
 }
 
 .text {
     align-self: center;
     display: flex;
     flex-direction: column;
-    width: 540rem;
+    width: 540px;
 
     &__headline {
-        @include fonts.font(60rem);
-        margin-bottom: 20rem;
+        @include fonts.font(3.75em);
+        margin-bottom: 20px;
     }
 
     &__paragraph {
-        @include fonts.font(18rem, $lh: 150%);
-        margin-bottom: 60rem;
+        @include fonts.font(1.125em, $lh: 150%);
+        margin-bottom: 60px;
     }
 }
 

@@ -3,66 +3,96 @@
 @use 'transitions';
 
 :host {
-    @include fonts.font(20rem);
-    display: block;
+    @include fonts.font(1.25em);
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
 
 :host(.--green-square-1) {
-    color: colors.$Laurel;
-    background-color: colors.$MintCream;
-    border: 1px solid colors.$Laurel;
-    padding: 20px 60px;
-    width: fit-content;
-    transition: transitions.$transition-lvl-1;
+    .button {
+        color: colors.$Laurel;
+        background-color: colors.$MintCream;
+        border: 1px solid colors.$Laurel;
+        padding: 20px 60px;
+        width: fit-content;
+        transition:
+            color transitions.$transition-lvl-1,
+            background-color transitions.$transition-lvl-1;
 
-    &:hover {
-        background-color: colors.$Laurel;
-        color: colors.$MintCream;
-        transition: transitions.$transition-lvl-1;
+        &:hover {
+            background-color: colors.$Laurel;
+            color: colors.$MintCream;
+            transition:
+                color transitions.$transition-lvl-1,
+                background-color transitions.$transition-lvl-1;
+        }
     }
 }
 
 :host(.--green-square-2) {
-    color: colors.$Laurel;
-    background-color: colors.$SwansDown;
-    border: 1px solid colors.$Laurel;
-    padding: 20px 60px;
-    width: fit-content;
-    transition: transitions.$transition-lvl-1;
+    .button {
+        color: colors.$Laurel;
+        background-color: colors.$SwansDown;
+        border: 1px solid colors.$Laurel;
+        padding: 20px 60px;
+        width: fit-content;
+        transition:
+            color transitions.$transition-lvl-1,
+            background-color transitions.$transition-lvl-1;
 
-    &:hover {
-        background-color: colors.$HunterGreen;
-        color: colors.$MintCream;
-        transition: transitions.$transition-lvl-1;
+        &:hover {
+            background-color: colors.$HunterGreen;
+            color: colors.$MintCream;
+            transition:
+                color transitions.$transition-lvl-1,
+                background-color transitions.$transition-lvl-1;
+        }
     }
 }
 
 :host(.--green-rounded) {
-    color: colors.$BlackRock;
-    background-color: colors.$SwansDown;
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: fit-content;
-    transition: transitions.$transition-lvl-1;
+    .button {
+        color: colors.$BlackRock;
+        background-color: colors.$SwansDown;
+        border-radius: 20px;
+        padding: 10px 20px;
+        width: fit-content;
+        transition:
+            color transitions.$transition-lvl-1,
+            background-color transitions.$transition-lvl-1;
 
-    &:hover {
-        background-color: colors.$HunterGreen;
-        color: colors.$MintCream;
-        transition: transitions.$transition-lvl-1;
+        &:hover {
+            background-color: colors.$HunterGreen;
+            color: colors.$MintCream;
+            transition:
+                color transitions.$transition-lvl-1,
+                background-color transitions.$transition-lvl-1;
+        }
     }
 }
 
 :host(.--yellow) {
-    color: colors.$BlackRock;
-    background-color: colors.$WildRice;
-    padding: 20px 60px;
-    width: fit-content;
-    transition: transitions.$transition-lvl-1;
+    .button {
+        color: colors.$BlackRock;
+        background-color: colors.$WildRice;
+        padding: 20px 60px;
+        width: fit-content;
+        transition:
+            color transitions.$transition-lvl-1,
+            background-color transitions.$transition-lvl-1;
 
-    &:hover {
-        background-color: colors.$OldGold;
-        transition: transitions.$transition-lvl-1;
+        &:hover {
+            background-color: colors.$OldGold;
+            transition:
+                color transitions.$transition-lvl-1,
+                background-color transitions.$transition-lvl-1;
+        }
     }
 }
