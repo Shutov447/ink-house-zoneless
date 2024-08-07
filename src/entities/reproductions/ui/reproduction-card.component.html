@@ -1,0 +1,34 @@
+<img
+    class="img"
+    [src]="reproduction().image"
+    [alt]="reproduction().name"
+/>
+<div class="author">{{ reproduction().author }}</div>
+<div class="name">{{ reproduction().name }}</div>
+<div class="characteristics">{{ reproduction().characteristics }}</div>
+<div class="price">{{ reproduction().price }}</div>
+<app-button class="--green-square-2"><a>В корзину</a></app-button>
+<meta
+    itemprop="name"
+    [content]="reproduction().name"
+/>
+<meta
+    itemprop="price"
+    [content]="reproduction().price"
+/>
+<meta
+    itemprop="country"
+    [content]="reproduction().country"
+/>
+<meta
+    itemprop="category"
+    [content]="reproduction().country"
+/>
+<meta
+    itemprop="characteristics"
+    [content]="reproduction().characteristics"
+/>
+<meta
+    itemprop="author"
+    [content]="reproduction().author"
+/>

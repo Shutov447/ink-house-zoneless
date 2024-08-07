@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Color } from '@shared/lib';
 import { NavbarComponent } from '@widgets/navbar';
 
 @Component({
@@ -11,6 +10,4 @@ import { NavbarComponent } from '@widgets/navbar';
     styleUrl: './app.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-    readonly color = Color.OldGold;
-}
+export class AppComponent {}

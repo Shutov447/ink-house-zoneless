@@ -1,0 +1,44 @@
+@use 'fonts';
+@use 'colors';
+
+:host {
+    display: block;
+    width: 100%;
+    max-width: 1110px;
+    box-sizing: content-box;
+}
+
+.controller {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &__title {
+        @include fonts.font(2.5em);
+        justify-self: flex-start;
+        margin-right: auto;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 32px;
+        text-transform: capitalize;
+    }
+}
+
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.active-button {
+    color: colors.$MintCream;
+    background-color: colors.$HunterGreen;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: fit-content;
+}

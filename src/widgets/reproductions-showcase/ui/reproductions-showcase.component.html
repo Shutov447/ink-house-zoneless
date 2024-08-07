@@ -1,0 +1,31 @@
+<div class="controller">
+    <h2 class="controller__title">Репродукции</h2>
+    <ul class="controller__controls">
+        @for (country of store.countries(); track country) {
+            <li>
+                <app-button
+                    (click)="store.selectCountry(country)"
+                    [ngClass]="
+                        store.selectedCountry() === country
+                            ? 'active-button'
+                            : '--green-rounded'
+                    "
+                    type="button"
+                    >{{ country }}</app-button
+                >
+            </li>
+        }
+    </ul>
+</div>
+<div class="showcase">
+    @for (
+        reproduction of store
+            .reproductionsByCountries()
+            .get(store.selectedCountry() || '');
+        track reproduction.image
+    ) {
+        <app-reproduction-card
+            [reproduction]="reproduction"
+        ></app-reproduction-card>
+    }
+</div>
