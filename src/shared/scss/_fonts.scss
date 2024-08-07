@@ -22,19 +22,19 @@ $Raleway: 'Raleway';
 }
 
 .body-L {
-    @include font(30rem);
+    @include font(1.875em);
 }
 
 .body-M {
-    @include font(24rem);
+    @include font(1.5em);
 }
 
 .body-S {
-    @include font(20rem);
+    @include font(1.25em);
 }
 
 .body-XS {
-    @include font(18rem);
+    @include font(1.125em);
 }
 
 body {

@@ -3,11 +3,14 @@
 @use 'colors';
 @use 'links';
 
-:root {
-    font-size: 1px;
-}
-
 body {
     background-color: colors.$MintCream;
     color: colors.$BlackRock;
+    font-size: 16px;
 }
+
+// @media (width < 376px) {
+//     body {
+//         font-size: 10px;
+//     }
+// }

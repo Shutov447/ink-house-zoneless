@@ -105,5 +105,11 @@
         "deploy:ghp": {
             "command": "nx build --output-path docs --base-href /wood-products-shop/ && ngh --dir docs/"
         }
+    },
+    "generators": {
+        "@schematics/angular:component": {
+            "changeDetection": "OnPush",
+            "style": "scss"
+        }
     }
 }
