@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="container__header">
+        <app-icon
+            [name]="'logo-2'"
+            [color]="color"
+        ></app-icon>
+        <h2 class="container__header__title">{{ title() }}</h2>
+    </div>
+    <br />
+    <p class="body-XS">
+        @for (text of texts(); track text) {
+            @if ($last) {
+                {{ text }}
+            } @else {
+                {{ text }}
+                <br />
+                <br />
+            }
+        }
+    </p>
+</section>
+<app-button class="--yellow">Ознакомится</app-button>
+
+<div class="filter"></div>

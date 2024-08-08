@@ -34,7 +34,7 @@ $Raleway: 'Raleway';
 }
 
 .body-XS {
-    @include font(1.125em);
+    @include font(1.125em); // 18px
 }
 
 body {
