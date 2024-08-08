@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BannerAdComponent } from '@entities/banner-ad';
 import { BusinessCardComponent } from '@entities/business-card';
+import { TeamShowcaseComponent } from '@entities/team-showcase';
 import { ReproductionsShowcaseComponent } from '@widgets/reproductions-showcase';
 
 @Component({
@@ -10,6 +11,7 @@ import { ReproductionsShowcaseComponent } from '@widgets/reproductions-showcase'
         BusinessCardComponent,
         ReproductionsShowcaseComponent,
         BannerAdComponent,
+        TeamShowcaseComponent,
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',

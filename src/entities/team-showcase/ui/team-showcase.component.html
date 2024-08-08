@@ -1,0 +1,27 @@
+<div class="main-img-wrapper">
+    <img
+        class="img"
+        src="images/hand-pencils-in-frame.png"
+        alt="hand-pencils-in-frame"
+    />
+</div>
+<section class="container">
+    <h2 class="container__title">Наша команда</h2>
+    <p class="body-XS">
+        Значимость этих проблем настолько очевидна, что базовый вектор развития
+        позволяет оценить значение экспериментов, поражающих по своей
+        масштабности и грандиозности. Мы вынуждены отталкиваться от того, что
+        консультация с широким активом.
+    </p>
+    <div class="container__members">
+        @for (member of teamMembers; track member) {
+            <div class="container__members__item">
+                <img
+                    class="img"
+                    [src]="member"
+                    [alt]="member"
+                />
+            </div>
+        }
+    </div>
+</section>
