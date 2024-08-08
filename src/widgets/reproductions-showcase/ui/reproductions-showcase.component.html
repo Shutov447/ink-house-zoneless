@@ -5,13 +5,13 @@
             <li>
                 <app-button
                     (click)="store.selectCountry(country)"
-                    [ngClass]="
+                    [class]="
                         store.selectedCountry() === country
-                            ? 'active-button'
+                            ? '--green-rounded--active'
                             : '--green-rounded'
                     "
                     type="button"
-                    >{{ country }}</app-button
+                    >{{ country | titlecase }}</app-button
                 >
             </li>
         }

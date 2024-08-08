@@ -2,6 +2,33 @@
 @use 'colors';
 @use 'transitions';
 
+@mixin button($color, $bgColor, $width: fit-content, $isRounded: false) {
+    .button {
+        color: $color;
+        background-color: $bgColor;
+        width: $width;
+        transition:
+            color transitions.$transition-lvl-1,
+            background-color transitions.$transition-lvl-1;
+
+        @if ($isRounded) {
+            border-radius: 20px;
+            padding: 10px 20px;
+        } @else {
+            padding: 20px 60px;
+            border: 1px solid $color;
+        }
+
+        &:hover {
+            color: $bgColor;
+            background-color: $color;
+            transition:
+                color transitions.$transition-lvl-1,
+                background-color transitions.$transition-lvl-1;
+        }
+    }
+}
+
 :host {
     @include fonts.font(1.25em);
     width: 100%;
@@ -16,83 +43,38 @@
 }
 
 :host(.--green-square-1) {
-    .button {
-        color: colors.$Laurel;
-        background-color: colors.$MintCream;
-        border: 1px solid colors.$Laurel;
-        padding: 20px 60px;
-        width: fit-content;
-        transition:
-            color transitions.$transition-lvl-1,
-            background-color transitions.$transition-lvl-1;
-
-        &:hover {
-            background-color: colors.$Laurel;
-            color: colors.$MintCream;
-            transition:
-                color transitions.$transition-lvl-1,
-                background-color transitions.$transition-lvl-1;
-        }
-    }
+    @include button(colors.$Laurel, colors.$MintCream);
+}
+:host(.--green-square-1--w100) {
+    @include button(colors.$Laurel, colors.$MintCream, 100%);
 }
 
 :host(.--green-square-2) {
-    .button {
-        color: colors.$Laurel;
-        background-color: colors.$SwansDown;
-        border: 1px solid colors.$Laurel;
-        padding: 20px 60px;
-        width: fit-content;
-        transition:
-            color transitions.$transition-lvl-1,
-            background-color transitions.$transition-lvl-1;
-
-        &:hover {
-            background-color: colors.$HunterGreen;
-            color: colors.$MintCream;
-            transition:
-                color transitions.$transition-lvl-1,
-                background-color transitions.$transition-lvl-1;
-        }
-    }
+    @include button(colors.$Laurel, colors.$LilyWhite);
+}
+:host(.--green-square-2--w100) {
+    @include button(colors.$Laurel, colors.$LilyWhite, 100%);
 }
 
 :host(.--green-rounded) {
+    @include button(colors.$HunterGreen, colors.$SwansDown, $isRounded: true);
+}
+:host(.--green-rounded--w100) {
+    @include button(colors.$HunterGreen, colors.$SwansDown, 100%, true);
+}
+:host(.--green-rounded--active) {
     .button {
-        color: colors.$BlackRock;
-        background-color: colors.$SwansDown;
+        color: colors.$SwansDown;
+        background-color: colors.$HunterGreen;
         border-radius: 20px;
         padding: 10px 20px;
         width: fit-content;
-        transition:
-            color transitions.$transition-lvl-1,
-            background-color transitions.$transition-lvl-1;
-
-        &:hover {
-            background-color: colors.$HunterGreen;
-            color: colors.$MintCream;
-            transition:
-                color transitions.$transition-lvl-1,
-                background-color transitions.$transition-lvl-1;
-        }
     }
 }
 
 :host(.--yellow) {
-    .button {
-        color: colors.$BlackRock;
-        background-color: colors.$WildRice;
-        padding: 20px 60px;
-        width: fit-content;
-        transition:
-            color transitions.$transition-lvl-1,
-            background-color transitions.$transition-lvl-1;
-
-        &:hover {
-            background-color: colors.$OldGold;
-            transition:
-                color transitions.$transition-lvl-1,
-                background-color transitions.$transition-lvl-1;
-        }
-    }
+    @include button(colors.$Hacienda, colors.$Picasso);
+}
+:host(.--yellow--w100) {
+    @include button(colors.$Hacienda, colors.$Picasso, 100%);
 }
