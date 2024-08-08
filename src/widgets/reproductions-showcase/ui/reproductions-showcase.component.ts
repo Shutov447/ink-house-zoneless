@@ -1,6 +1,7 @@
 import {
     ChangeDetectionStrategy,
     Component,
+    effect,
     inject,
     input,
 } from '@angular/core';
@@ -20,11 +21,25 @@ import { TitleCasePipe } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ReproductionsShowcaseComponent {
+    private readonly country = effect(
+        () => {
+            if (!this.selectedCountry()) {
+                this.store.selectCountry(this.store.countries()[0]);
+
+                return;
+            }
+
+            this.store.selectCountry(this.selectedCountry() as string);
+        },
+        {
+            allowSignalWrites: true,
+        },
+    );
+
     readonly store = inject(ReproductionsStore);
-    readonly selectedCountry = input('франция');
+    readonly selectedCountry = input<string>();
 
     constructor() {
         this.store.loadReproductions();
-        this.store.selectCountry(this.selectedCountry());
     }
 }
