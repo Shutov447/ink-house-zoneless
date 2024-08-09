@@ -2,11 +2,12 @@
 @use 'colors';
 @use 'transitions';
 
-@mixin button($color, $bgColor, $width: fit-content, $isRounded: false) {
+@mixin button($color, $bgColor, $size: fit-content, $isRounded: false) {
     .button {
         color: $color;
         background-color: $bgColor;
-        width: $width;
+        width: $size;
+        height: $size;
         transition:
             color transitions.$transition-lvl-1,
             background-color transitions.$transition-lvl-1;

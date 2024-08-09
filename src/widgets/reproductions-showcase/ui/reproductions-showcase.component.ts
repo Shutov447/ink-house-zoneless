@@ -38,8 +38,4 @@ export class ReproductionsShowcaseComponent {
 
     readonly store = inject(ReproductionsStore);
     readonly selectedCountry = input<string>();
-
-    constructor() {
-        this.store.loadReproductions();
-    }
 }

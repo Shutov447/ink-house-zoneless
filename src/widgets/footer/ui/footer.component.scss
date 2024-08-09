@@ -1,0 +1,51 @@
+@use 'colors';
+@use 'fonts';
+
+:host {
+    display: flex;
+    width: 100%;
+    padding: 23px;
+}
+
+.body-XS,
+a {
+    color: colors.$GrannySmith;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 115px;
+
+    &__logo {
+        @include fonts.font(1.25em, 700);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: colors.$Laurel;
+        margin-bottom: 27px;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mg-r-60px {
+    margin-right: 60px;
+}
+
+.last-list {
+    @include fonts.font(0.75em, $lh: 120%);
+    justify-self: flex-end;
+    margin-left: auto;
+
+    &__icons {
+        display: flex;
+        gap: 35px;
+        margin-bottom: 7px;
+    }
+}

@@ -1,17 +1,24 @@
 @use 'colors';
 
 :host {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
 }
-.header {
+
+.widget-wrapper {
     display: flex;
     justify-content: center;
-    height: 100px;
     width: 100%;
     background-color: colors.$LilyWhite;
 
-    &__navbar {
+    &__item {
         max-width: 1110px;
     }
+}
+
+.main {
+    flex-grow: 1;
+    margin-bottom: 70px;
 }
