@@ -1,6 +1,7 @@
 @use 'fonts';
 @use 'colors';
 @use 'transitions';
+@use 'constants';
 
 @mixin button($color, $bgColor, $size: fit-content, $isRounded: false) {
     .button {
@@ -18,6 +19,11 @@
         } @else {
             padding: 20px 60px;
             border: 1px solid $color;
+
+            @media (width < constants.$tablet-768) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
         }
 
         &:hover {

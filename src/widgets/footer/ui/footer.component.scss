@@ -1,10 +1,12 @@
 @use 'colors';
 @use 'fonts';
+@use 'constants';
 
 :host {
     display: flex;
     width: 100%;
-    padding: 23px;
+    margin: 23px 39px;
+    // border-top: 1px solid red;
 }
 
 .body-XS,
@@ -17,6 +19,7 @@ a {
     flex-direction: column;
     gap: 8px;
     margin-right: 115px;
+    min-width: max-content;
 
     &__logo {
         @include fonts.font(1.25em, 700);
@@ -26,26 +29,64 @@ a {
         color: colors.$Laurel;
         margin-bottom: 27px;
     }
+
+    &__sub-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
-.list {
+.lists-container {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    width: 100%;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        &--last {
+            @include fonts.font(0.75em, $lh: 120%);
+            justify-self: flex-end;
+            margin-left: auto;
+
+            &__icons {
+                display: flex;
+                gap: 35px;
+                margin-bottom: 7px;
+            }
+        }
+    }
 }
 
 .mg-r-60px {
     margin-right: 60px;
 }
 
-.last-list {
-    @include fonts.font(0.75em, $lh: 120%);
-    justify-self: flex-end;
-    margin-left: auto;
+@media (width < constants.$tablet-768) {
+    :host {
+        flex-direction: column;
+    }
 
-    &__icons {
-        display: flex;
-        gap: 35px;
-        margin-bottom: 7px;
+    .main-info {
+        flex-direction: row;
+        gap: 0;
+        margin: 0 0 26px 0;
+        min-width: fit-content;
+
+        &__logo {
+            @include fonts.font(1.25em, 700);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: colors.$Laurel;
+            margin-bottom: 27px;
+        }
+
+        &__sub-text {
+            justify-self: flex-end;
+            margin-left: auto;
+        }
     }
 }

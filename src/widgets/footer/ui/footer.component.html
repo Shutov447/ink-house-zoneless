@@ -6,55 +6,59 @@
         ></app-icon>
         <div>Ink. House</div>
     </div>
-    <div class="body-S">{{ phoneNumber }}</div>
-    <div class="body-XS"><a [routerLink]="['/']">Мастерская</a></div>
+    <div class="main-info__sub-text">
+        <div class="body-S">{{ phoneNumber }}</div>
+        <div class="body-XS"><a [routerLink]="['/']">Мастерская</a></div>
+    </div>
 </div>
 
-@for (list of lists(); track list.title) {
-    <div class="list mg-r-60px">
-        <h4 class="body-S">{{ list.title }}</h4>
-        <ul class="list">
-            @for (item of list.items; track item) {
-                <li>
-                    <a
-                        class="body-XS"
-                        [routerLink]="['/']"
-                        routerLinkActive="router-link-active"
-                        >{{ item | titlecase }}</a
-                    >
-                </li>
-            }
-        </ul>
-    </div>
-}
+<div class="lists-container">
+    @for (list of lists(); track list.title) {
+        <div class="lists-container__item mg-r-60px">
+            <h4 class="body-S">{{ list.title }}</h4>
+            <ul class="lists-container__item">
+                @for (item of list.items; track item) {
+                    <li>
+                        <a
+                            class="body-XS"
+                            [routerLink]="['/']"
+                            routerLinkActive="router-link-active"
+                            >{{ item | titlecase }}</a
+                        >
+                    </li>
+                }
+            </ul>
+        </div>
+    }
 
-<div class="last-list list">
-    <ul class="last-list__icons">
-        <li>
-            <a [routerLink]="['/']"
-                ><app-icon
-                    [color]="blackRock"
-                    [name]="'facebook'"
-                ></app-icon
-            ></a>
-        </li>
-        <li>
-            <a [routerLink]="['/']"
-                ><app-icon
-                    [color]="blackRock"
-                    [name]="'instagram'"
-                ></app-icon
-            ></a>
-        </li>
-        <li>
-            <a [routerLink]="['/']"
-                ><app-icon
-                    [color]="blackRock"
-                    [name]="'youtube'"
-                ></app-icon
-            ></a>
-        </li>
-    </ul>
-    <div class="body-XS">Ink. House ®</div>
-    <div class="body-XS">All rights reserved</div>
+    <div class="lists-container__item lists-container__item--last">
+        <ul class="lists-container__item--last__icons">
+            <li>
+                <a [routerLink]="['/']"
+                    ><app-icon
+                        [color]="blackRock"
+                        [name]="'facebook'"
+                    ></app-icon
+                ></a>
+            </li>
+            <li>
+                <a [routerLink]="['/']"
+                    ><app-icon
+                        [color]="blackRock"
+                        [name]="'instagram'"
+                    ></app-icon
+                ></a>
+            </li>
+            <li>
+                <a [routerLink]="['/']"
+                    ><app-icon
+                        [color]="blackRock"
+                        [name]="'youtube'"
+                    ></app-icon
+                ></a>
+            </li>
+        </ul>
+        <div class="body-XS">Ink. House ®</div>
+        <div class="body-XS">All rights reserved</div>
+    </div>
 </div>

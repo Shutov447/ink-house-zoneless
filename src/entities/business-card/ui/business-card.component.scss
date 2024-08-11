@@ -1,4 +1,5 @@
 @use 'fonts';
+@use 'constants';
 
 :host {
     display: flex;
@@ -18,7 +19,7 @@
     }
 
     &__paragraph {
-        @include fonts.font(1.125em, $lh: 150%);
+        @include fonts.font(1.125em);
         margin-bottom: 60px;
     }
 }
@@ -31,5 +32,18 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+}
+
+// позже вынести в mixin если будет повторятся
+@media (width < constants.$tablet-768) {
+    .body-S {
+        @include fonts.font(1.125em); // 18px
+    }
+
+    .text {
+        &__headline {
+            @include fonts.font(2.5em, $lh: 100%); // 40px
+        }
     }
 }

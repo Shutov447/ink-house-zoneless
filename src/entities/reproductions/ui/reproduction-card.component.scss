@@ -1,5 +1,6 @@
 @use 'colors';
 @use 'fonts';
+@use 'constants';
 
 :host {
     display: flex;
@@ -12,7 +13,8 @@
 .img {
     width: 310px;
     height: 422px;
-    object-fit: contain;
+    background-position: center;
+    object-fit: cover;
 }
 
 .author {
@@ -35,4 +37,14 @@
     @include fonts.font(1.5em);
     margin: 30px 0 19px 0;
     color: colors.$Laurel;
+}
+
+@media (width < constants.$tablet-768) {
+    :host {
+        width: 330px;
+    }
+
+    .img {
+        width: 290px;
+    }
 }

@@ -1,5 +1,6 @@
 @use 'fonts';
 @use 'colors';
+@use 'constants';
 
 :host {
     display: block;
@@ -13,6 +14,7 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 30px;
+    margin: 0 39px;
 
     &__title {
         @include fonts.font(2.5em);
@@ -32,4 +34,14 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+@media (width < constants.$tablet-768) {
+    .controller {
+        margin: 0 39px;
+
+        &__title {
+            @include fonts.font(1.875em);
+        }
+    }
 }

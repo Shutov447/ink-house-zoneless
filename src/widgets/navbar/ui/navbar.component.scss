@@ -1,7 +1,11 @@
+@use 'fonts';
+@use 'colors';
+@use 'constants';
+
 :host {
     display: block;
     width: 100%;
-    padding: 33px;
+    margin: 33px 39px;
 }
 
 .navigation {
@@ -19,9 +23,26 @@
         &__link {
             display: flex;
             align-items: center;
+            color: colors.$Laurel;
+            font-weight: 700;
 
             &__name {
                 margin-left: 8px;
+            }
+        }
+    }
+}
+
+// позже вынести в mixin если будет повторятся
+@media (width < constants.$tablet-768) {
+    .body-S {
+        @include fonts.font(1.125em); // 18px
+    }
+
+    .navigation {
+        &__logo {
+            &__link {
+                font-size: 1.11111em; // 20px
             }
         }
     }

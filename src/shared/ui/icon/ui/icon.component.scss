@@ -1,0 +1,12 @@
+@use 'constants';
+
+@mixin iconSize($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@media (width < constants.$tablet-768) {
+    .logo {
+        @include iconSize(60px, 60px);
+    }
+}

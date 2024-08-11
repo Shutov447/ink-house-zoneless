@@ -22,11 +22,11 @@ $Raleway: 'Raleway';
 }
 
 .body-L {
-    @include font(1.875em);
+    @include font(1.875em); // 30px
 }
 
 .body-M {
-    @include font(1.5em);
+    @include font(1.5em); // 24px
 }
 
 .body-S {
@@ -39,4 +39,5 @@ $Raleway: 'Raleway';
 
 body {
     font-family: $Raleway;
+    // scroll-padding-top: var(--header-height);
 }
